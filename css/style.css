@@ -1,0 +1,292 @@
+/* Basic Reset & Font */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    font-weight: 400; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px; /* Lebar maksimum konten */
+    margin: 40px auto; /* Tengah secara horizontal, margin atas/bawah */
+    padding: 20px;
+    background-color: #fff; /* Latar belakang konten putih */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+   
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    font-weight: 600; 
+    color: #222;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-weight: 700; } /* Bold (700) untuk H1 */
+h2 { font-weight: 600; } /* Semi-bold (600) untuk H2 */
+h3 { font-weight: 500; } /* Medium (500) untuk H3 */
+h4 { font-weight: 500; } /* Medium (500) untuk H4 */
+
+em {
+   font-style: italic;
+}
+
+
+h2 {
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #007bff; 
+    transform: scale(1.1);
+}
+
+.tab-button.active {
+    background-color: #fff;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-top: 3px solid #007bff; 
+    border-bottom: 2px solid #fff;
+    font-weight: 600; 
+    color: #0056b3; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    display: flex; /* Menggunakan flexbox untuk layout header */
+    justify-content: space-between; /* Info kiri, gambar kanan */
+    align-items: flex-start; /* Rata atas */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-info {
+    flex-grow: 1; 
+}
+
+.header-info h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.2em;
+
+}
+
+.header-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-pic {
+    width: 80px; /* Ukuran foto profil */
+    height: 80px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover; /* Memastikan gambar terpotong rapi */
+    margin-left: 20px; /* Jarak dari teks */
+}
+
+/* Sections (About, Experience, Education, Skills) */
+section {
+    margin-bottom: 30px;
+}
+
+/* Experience & Education Articles */
+.experience article,
+.education article {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #eee; /* Garis penanda di kiri */
+}
+
+.experience h3,
+.education h3 {
+    margin-bottom: 2px;
+    font-size: 1.2em;
+    /* font-weight: 500; sudah diatur di atas */
+}
+.experience h4,
+.education h4 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+.date {
+    display: block; /* Tampilkan tanggal di baris baru */
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+/* Skills */
+.skills div {
+    margin-bottom: 8px;
+}
+.skills strong {
+    font-weight: 600; 
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Jarak antar item proyek */
+}
+
+.project-item {
+    border: 1px solid #eee; 
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px; 
+    
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.project-item p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.project-item strong {
+     font-size: 0.9em;
+     color: #444;
+     font-weight: 600;
+}
+
+.project-item a {
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column-reverse; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-left: 0;
+        margin-bottom: 15px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .project-grid {
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-icons a {
+        font-size: 1.4em;
+        margin: 0 5px;
+    }
+}
+
+
+/* === Styles for Tabs === */
+.tabs {
+    display: flex; 
+    border-bottom: 2px solid #eee; 
+    margin-bottom: 20px;  
+    margin-top: -20px; 
+    position: sticky; 
+    top: 0; 
+    background-color: #fff;
+    z-index: 10; 
+    padding-top: 10px; 
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #f1f1f1; 
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px; 
+    font-size: 1em;
+    transition: background-color 0.3s, border-color 0.3s, border-top-color 0.3s; /* Efek transisi */
+}
+
+.tab-button:hover {
+    background-color: #ddd; 
+}
+
+.tab-button.active {
+    background-color: #fff; 
+    border-left: 1px solid #eee; 
+    border-right: 1px solid #eee;
+    border-top: 3px solid #007bff; 
+    border-bottom: 2px solid #fff; 
+    font-weight: 600; 
+    color: #0056b3; 
+}
+
+/* === Styles for Tab Content === */
+.tab-content-container {
+    padding-top: 10px; 
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s; 
+}
+
+.tab-content.active {
+    display: block; 
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.contact-icons a {
+    color: #333; /* Warna ikon abu-abu gelap */
+    font-size: 1.5em; /* Ukuran ikon */
+    margin: 0 8px;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #007bff; 
+    transform: scale(1.1);
+}
+
