@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
     <div class="container">
 
@@ -115,6 +115,8 @@
                      <div>
                         <strong>Tools:</strong> Tableau, Excel, Git, Power BI, Docker
                      </div>
+                </section>
+
                 <section class="contact">
                     <h2>Contact</h2>
                     <p>Feel free to reach out! <br> 
@@ -123,96 +125,107 @@
                 </section>
 
                  <footer>
-                     </footer>
-            </div> <div id="projects" class="tab-content active">
+                 </footer>
+            </div> 
+            
+            <div id="projects" class="tab-content active">
                 <section class="projects">
                     <h2>Projects</h2>
+                    
+                    <!-- Project Filter Buttons -->
+                    <div class="project-filters">
+                        <button class="filter-button all active" data-category="all">All Projects</button>
+                        <button class="filter-button" data-category="data-analyst">Data Analyst</button>
+                        <button class="filter-button" data-category="data-science">Data Science</button>
+                        <button class="filter-button" data-category="data-engineer">Data Engineer</button>
+                    </div>
+
                     <div class="project-grid">
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-analyst">
                             <h3>Customer Segmentation</h3>
                             <p>Analyzed Superstore performance, sales trends, and customer acquisition. Performed customer segmentation using geographical/categorical labels and RFM analysis.</p>
                             <p><strong>Stack:</strong> Python, Microsoft Power BI, DAX</p>
                             <a href="https://github.com/Ramshall/Customer-Segmentation">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-analyst">
                             <h3>Segmentation & Marketing Channel Analysis</h3>
                             <p>Customer segmentation, RFM analysis, and marketing channel conversion rate analysis. Built dashboards for customer overview and RFM/marketing insights.</p>
                             <p><strong>Stack:</strong> Power BI, DAX</p>
                             <a href="https://github.com/Ramshall/marketing_channel_analysis">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-analyst">
                             <h3>People Analytics: Employee Satisfaction Analysis</h3>
                             <p>Visualized and analyzed employee satisfaction and related attributes. Developed Power BI dashboards for overall insights, multivariate analysis, and correlation matrix.</p>
                             <p><strong>Stack:</strong> Python, Microsoft Power BI, Python, DAX</p>
                             <a href="https://github.com/Ramshall/people_analytics">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-analyst">
                             <h3>Customer Satisfaction: Ticketing System Review</h3>
                             <p>Analyzed customer satisfaction with a ticketing system, assessing review participation, NPS (Net Promoter Score), and overall CSAT (Customer Satisfaction). Conducted sentiment analysis on customer reviews across various ticketing platforms.</p>
                             <p><strong>Stack:</strong> Python, Microsoft Power BI, Hugging Face, DAX</p>
                             <a href="https://github.com/Ramshall/Customer-Satisfaction?tab=readme-ov-file">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-analyst">
                             <h3>Bee Cycle - Performance (Sales & Customer Analytics)</h3>
                             <p>Analyzed "Beecycle" sales, product, and customer data using Power BI. Created interactive dashboards for business performance, customer profiling, and product sales trends with Power Query and DAX.</p>
                             <p><strong>Stack:</strong> Power BI, Power Query, DAX, Data Modelling</p>
                             <a href="https://github.com/Ramshall/bee_cycle-performance">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-engineer">
                             <h3>ETL for Human Capital Analytics</h3>
                             <p>ETL pipeline that integrates HR data from multiple sources and powers an analytics dashboard.</p>
                             <p><strong>Stack:</strong> Python, PostgreeSQL, MySQL, Kafka, Google Cloud Platform, Google Data Studio</p>
                             <a href="https://github.com/Ramshall/Final_Project_FTDE2/tree/main">Repository</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-engineer">
                             <h3>Batch Processing</h3>
                             <p>Batch ETL pipeline using Airflow and Spark to process rental data from PostgreSQL into TiDB/Parquet, with results exposed via an API.</p>
                              <p><strong>Stack:</strong> Python, PostgreeSQL, TiDB, Spark, Airflow</p>
                             <a href="https://github.com/Ramshall/ftde2_project_3">Repository</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-engineer">
                             <h3>Data Warehouse DVD Rental with DBT</h3>
                             <p>Data warehouse using dbt and PostgreSQL to model DVD rental data using a medallion architecture.</p>
                             <p><strong>Stack:</strong> Python, DBT, PostgreSQL</p>
                             <a href="https://github.com/Ramshall/ftde2-project_2">Repository</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-science">
                             <h3>IsAble-Bangkit Project</h3>
                             <p>Led ML development for IsAble (Bangkit Capstone), an app recognizing Indonesian Sign Language gestures.</p>
                             <p><strong>Stack:</strong> Python, TensorFlow </p>
                             <a href="https://github.com/Afaryn/IsAble_v2">Source Code</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-engineer">
                             <h3>Simple Library Management System</h3>
                             <p>Developed a simple Python/SQL Library Management System (LMS) for book, user, and loan management.</p>
                              <p><strong>Stack:</strong> Python, SQL</p>
                             <a href="https://github.com/Ramshall/Project-Library-Management-System-LMS-Sederhana">Source Code</a>
                         </article>
-                         <article class="project-item">
+                         <article class="project-item" data-category="data-science">
                             <h3>Diabetes Prediction</h3>
                             <p>Developed an end-to-end Python ML pipeline for diabetes prediction, including data processing, modeling, evaluation, and deployment via Streamlit and an endpoint.</p>
                             <p><strong>Stack:</strong> Python, Scikit-Learn, Streamlit</p>
                             <a href="https://github.com/Ramshall/mlprocess_diabetes/tree/main">Source Code</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-science">
                             <h3>Insurance Probability</h3>
                             <p>Applied statistical and probabilistic analysis to health insurance data to determine key drivers of medical costs.</p>
                             <p><strong>Stack:</strong> Python, Scipy, Numpy</p>
                             <a href="https://github.com/Ramshall/Final-Project-Probability-Insurance">Source Code</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-analyst">
                             <h3>Inter Provincial Trade</h3>
                             <p>Developed an interactive Tableau dashboard to visualize inter-provincial trade flows and values (export-import) in Indonesia based on 2016 IRIO data.</p>
                             <p><strong>Stack:</strong> Tableau</p>
                             <a href="https://public.tableau.com/app/profile/muhammad.ramadhani2360/viz/InterProvincialTradeinIndonesia/NilaiJTAntarProvinsi">Visualization</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-analyst">
                             <h3>HR Analytics</h3>
                             <p>Built an HR Analytics Dashboard using Tableau to track KPIs and visualize key employee metrics.</p>
                             <p><strong>Stack:</strong> Tableau</p>
                             <a href="https://public.tableau.com/app/profile/muhammad.ramadhani2360/viz/HumanResourceAnalyticsBackup_16760953452270/HRDashboard">Visualization</a>
                         </article>
-                        <article class="project-item">
+                        <article class="project-item" data-category="data-analyst">
                             <h3>Goal Analysis of Top 4 Footballers</h3>
                             <p>Visualized and compared goal-scoring statistics (by club, opponent, venue) for 4 top football players using Tableau.</p>
                             <p><strong>Stack:</strong> Tableau</p>
@@ -220,38 +233,10 @@
                         </article>
                     </div>
                 </section>
-            </div> </div> </div> <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
+            </div> 
+        </div> 
+    </div> 
 
-            // Tidak perlu set default tab via JS, karena sudah diatur via class 'active' di HTML
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetTab = button.getAttribute('data-tab'); // Dapatkan ID target dari atribut data-tab
-
-                    // 1. Nonaktifkan semua tombol dan konten
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-
-                    // 2. Aktifkan tombol yang diklik dan konten yang sesuai
-                    button.classList.add('active');
-                    const targetElement = document.getElementById(targetTab);
-                    if (targetElement) { // Check if element exists
-                       targetElement.classList.add('active');
-                    } else {
-                        console.error("Target tab content not found:", targetTab);
-                    }
-                });
-            });
-
-            
-             const initiallyActiveContent = document.querySelector('.tab-content.active');
-             if (initiallyActiveContent) {
-             }
-
-        });
-    </script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
